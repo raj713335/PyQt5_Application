@@ -78,6 +78,11 @@ class Ui_MainWindow(object):
         y=int(self.comboBox_2.currentText())
         xor= (x and not y) or (not x and y)
 
+        if xor==True:
+            xor=1
+        else:
+            xor=0
+
         self.label.setText("X XOR Y ="+str(xor))
 
 
